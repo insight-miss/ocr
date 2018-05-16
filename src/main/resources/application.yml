@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tianmao?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+  jackson:
+    default-property-inclusion: non_null
+  freemarker:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 2Mb
+      max-request-size: 20Mb
+server:
+  servlet:
+    context-path: /tianmao
+  port: 8080
+
+
+
+web.upload-path: /home/twl/IdeaProjects/ocr/src/main/resources/static/image/
+
+web.storage-path: /home/twl/IdeaProjects/ocr/src/main/resources/static/excel/
